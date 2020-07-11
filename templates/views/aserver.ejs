@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASG Technologies</title>
+
+  <!-- liks for bootstrap -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- links for w3.css -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- logo of company -->
+  <link rel="icon" href="./ASG Correct Logo.PNG">
+
+  <!-- style link and script links  -->
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js"></script>
+
+  <!-- font styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <!-- for icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+  <!-- font-awesome -->
+  <script src="https://use.fontawesome.com/b4b47f936d.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <style>
+    /* other css will goes hear  */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      letter-spacing: 2px;
+      scroll-behavior: smooth;
+    }
+
+    .logo {
+      margin-top: -48px;
+      margin-left: -33px;
+      width: 140px;
+    }
+
+    .searchBar {
+      position: relative;
+      padding: 27px;
+    }
+
+
+    .blur-all {
+      filter: blur(2px);
+    }
+
+    .card {
+      padding: 0px;
+    }
+
+    .header {
+      background-image: url(https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 80vh;
+    }
+
+    .mainHeading {
+      font-size: 41px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bolder;
+      margin-top: 0;
+    }
+
+    .small {
+      font-size: smaller;
+    }
+
+    .effect {
+      transition: all 0.4s;
+    }
+
+    .effect:hover {
+      transition: all 0.4s;
+      margin-top: -5px;
+      filter: drop-shadow(1px 1px 10px black);
+    }
+
+    .shadowIndigo {
+      transition: all 0.4s;
+    }
+
+    .shadowIndigo:hover {
+      transition: all 0.4s;
+      margin-top: -5px;
+      filter: drop-shadow(1px 1px 10px #3f51b5);
+    }
+
+    .navbar-nav li {
+      margin-left: 25px;
+    }
+
+    .shadow {
+      filter: drop-shadow(1px 1px 8px black);
+      transition: 0.4s;
+    }
+
+    .responsiveSearch {
+      transition: 0.4s;
+    }
+
+    .b1 {
+      background-color: #3f51b5 !important;
+
+      transition: 0.2s all ease-in-out;
+    }
+
+    .cardFix {
+      width: 110%;
+      margin-left: -5%;
+    }
+
+    .hideMobile {
+      display: none;
+
+    }
+
+    .minContent {
+      display: none;
+    }
+
+    .b2 {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    }
+
+    .card {
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 1px 1px 15px black;
+      transition: 0.3s;
+      position: relative;
+      top: -4px;
+    }
+
+    .card:hover .card-img-top {
+      filter: sepia(0);
+      transition: 0.3s all ease-in-out;
+    }
+
+    .card-img-top {
+      filter: sepia(50%);
+      transition: all 0.3s ease-in-out;
+    }
+
+
+
+    .d-none {
+      display: none;
+    }
+
+    .socialMeadia {
+      position: fixed;
+      top: 40%;
+      left: 10px;
+      z-index: 10000;
+      transition: 0.2s all ease-in-out;
+    }
+
+    #show:hover {
+      transform: scale(1.1);
+      transition: 0.2s all ease-in-out;
+    }
+
+    .loginFix {
+      margin-left: 24px;
+    }
+
+    #input {
+      border: none;
+      border-bottom: 2px solid #3f51b5;
+    }
+
+    @media screen and (max-width:1200px) {
+      .responsiveSearch {
+        display: hidden;
+      }
+
+      .minContent {
+        display: none;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-wrap"  style="background: #000000">
+    <a class="navbar-brand" href="#">ASG Technologies</a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+      <span class="navbar-toggler-icon"></span>
+     </button>
+  
+    <div class="collapse navbar-collapse class" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto">
+        
+          
+        
+        <li class="nav-item  " >
+        
+          <form action="/goback" method="POST">
+
+            <button class="nav-link"   style="padding-left: 20px; color: white; background-color: black;">Home </button>
+
+          </form>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="padding-left: 20px; color: white;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Courses
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" color: >Softaware </a>
+            <a class="dropdown-item" href="#">Js</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">python</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="padding-left: 20px; color: white;">Live</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="padding-left: 20px; color: white;">About </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" style="padding-left: 20px; color: white;">Contact</a>
+        </li>
+        <li class="nav-item">
+          <form action="/admin/logout" method="POST">
+          <!-- <a class="nav-link " href="" style="padding-left: 20px; color: white;">Log Out</a> -->
+            <button style="padding-left: 20px; color: white; background-color: black;"> Log out </button>
+        </form>
+        </li>
+
+
+        <li>
+          <form action="/deleteServer" method="POST">
+          <button style="padding-left: 20px; color: white; background-color: black;">  Delete all Lectures</button>
+        </form>
+
+        </li>
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="padding-left: 20px; color: white;">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div></button>
+  </nav>
+
+<br><br>
+  <form action="/admin/server/upload" method="POST" enctype="multipart/form-data">
+
+    <div class="file-field input-field">
+      <div class="btn btn-secondary">
+          <input name="videoLearn" type="file"  multiple>
+          <button type="submit" class="btn btn-primary" style="float: right;">Submit</button>
+
+        </div>
+  </div>
+  </form>
+  
+  
+  <div class="row">
+   
+      <!-- <iframe width="100%" height="100%"  class="col-md-9 col-12 " style="height:90vh" src="https://www.youtube.com/embed/HV7mLcsUp5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="videoPlayer"></iframe> -->
+     
+
+        <div class="col-md-3 col-12 sm-drop" style="overflow-x: hidden;width: 100%;">
+
+          <%let array = imageTotalCount%>
+          <% for( let i = 0; i < array; i++ ) { %>
+            <%  let vidId =  {id:i}  %>
+              <%let number = vidId.id%>
+  <form action="/server/<%=number%>" method="POST" style=" width: 10%px; margin-left: 5%;">
+  <center>
+    <button>
+      Lecture <%=vidId.id +1%>
+    </button>
+  </center>  
+  </form>
+          <% } %>
+           
+
+
+
+        </div>
+
+        <% if(file){ %>
+
+          <video src="<%=file %>" controls style="width: 75%; height: 70%;" ></video>
+          <%}%>
+    
+
+
+      <!-- </div> -->
+    <!-- <div class="col-md-3 col-12 sm-drop" style="overflow-x: hidden;width: 100%;" id="contant">
+    
+      <div class="drop-down1">
+        <ul>
+          
+
+          <a id="sec1">
+            <li class="mx-3">Section 1 <span><span id="plus1"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus1" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          
+          <div id="sec1Drop" class="drop-down-content">
+            <h4>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            </h4>
+
+          </div>
+
+          <a id="sec2">
+            <li class="mx-3">Section 2<span><span id="plus2"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus2" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          <div id="sec2Drop" class="drop-down-content">
+            <h4><a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/></h4>
+          </div>
+
+          <a id="sec3">
+            <li class="mx-3">Section 3 <span><span id="plus3"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus3" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          <div id="sec3Drop" class="drop-down-content">
+            <h4><a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/></h4>
+
+          </div>
+          <a id="sec4">
+            <li class="mx-3">Section 4 <span><span id="plus4"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus4" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          <div id="sec4Drop" class="drop-down-content">
+            <h4><a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/></h4>
+
+          </div>
+
+          <a id="sec5">
+            <li class="mx-3">Section 5 <span><span id="plus5"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus5" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          <div id="sec5Drop" class="drop-down-content">
+            <h4><a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/></h4>
+          </div> <a id="sec6">
+            <li class="mx-3">Section 6 <span><span id="plus6"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus6" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          <div id="sec6Drop" class="drop-down-content">
+            <h4><a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/></h4>
+
+          </div>
+
+          <a id="sec7">
+            <li class="mx-3">Section 7 <span><span id="plus7"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus7" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          <div id="sec7Drop" class="drop-down-content">
+            <h4><a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/></h4>
+          </div> <a id="sec8">
+            <li class="mx-3">Section 8 <span><span id="plus8"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus8" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          <div id="sec8Drop" class="drop-down-content">
+            <h4><a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/></h4>
+
+          </div>
+
+          <a id="sec9">
+            <li class="mx-3">Section 9 <span><span id="plus9"  style="position: relative;float: right;"><i class="fa fa-plus"></i></span><span id="minus9" style="position: relative;float: right;"><i class="fa fa-minus"></i></span></span>
+            </li>
+          </a>
+          <div id="sec9Drop" class="drop-down-content">
+            <h4><a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/>
+            <a href="#">Introduction</a><br/></h4>
+          </div>
+
+        </ul>
+      </div>
+    </div> -->
+
+
+
+
+    <style>
+      .drop-down1 ul {
+        list-style-type: none;
+      }
+      .active{
+        box-shadow: 1px 1px 4px;
+      }
+      .drop-down1 ul li {
+        /* border: 1px solid; */
+        
+        padding-top: 17px;
+        padding-left: 17px;
+        padding-bottom: 17px;
+        transition: 0.3s;
+        border-radius: 2px;
+        font-size: 20px;
+        cursor: pointer;
+        border-bottom: 0.5px solid grey;
+        /* filter: drop-shadow(1px 1px 1px 4x black); */
+      }
+      .drop-down1 ul li:hover{
+        /* box-shadow: 1px 1px 4px; */
+        margin: 0;
+        background:linear-gradient(90deg, #fdfbfb 0%,#ebedee 100% );
+      }
+      .sm-drop{
+        overflow-y: scroll;
+        /* width:100%; */
+        padding: 0px;
+        padding-right: 10px;
+        height: 90vh;
+        /* position: sticky;   */
+      }
+      .drop-down-content {
+
+        padding-left: 30px;
+      }
+      
+      @media only screen and (max-width: 700px) {
+        .sm-drop{
+          margin-top: 20px;
+          height: auto;
+          padding-right: 25px;
+        }
+      }
+    </style>
+    <script>
+      $("#sec1Drop,#sec2Drop,#sec3Drop,#sec4Drop,#sec5Drop,#sec6Drop,#sec7Drop,#sec8Drop,#sec9Drop").hide();
+      $('#plus1,#plus2,#plus3,#plus4,#plus5,#plus6,#plus7,#plus8,#plus9').show();
+      $('#minus1,#minus2,#minus3,#minus4,#minus5,#minus6,#minus7,#minus8,#minus9').hide();
+
+      $('#sec1').click(() => {
+        $('#sec1Drop').slideToggle();
+        $("#plus1,#minus1").toggle("smooth");
+
+      })
+      $('#sec2').click(() => {
+        $('#sec2Drop').slideToggle();
+        $("#plus2,#minus2").toggle("smooth");
+      });
+      $('#sec3').click(() => {
+        $('#sec3Drop').slideToggle();
+        $("#plus3,#minus3").toggle("smooth");
+      });
+      $('#sec4').click(() => {
+        $('#sec4Drop').slideToggle();
+        $("#plus4,#minus4").toggle("smooth");
+      });
+      $('#sec5').click(() => {
+        $('#sec5Drop').slideToggle();
+        $("#plus5,#minus5").toggle("smooth");
+      });
+      $('#sec6').click(() => {
+        $('#sec6Drop').slideToggle();
+        $("#plus6,#minus6").toggle("smooth");
+      });
+      $('#sec7').click(() => {
+        $('#sec7Drop').slideToggle();
+        $("#plus7,#minus7").toggle("smooth");
+      });
+      $('#sec8').click(() => {
+        $('#sec8Drop').slideToggle();
+        $("#plus8,#minus8").toggle("smooth");
+      });
+      $('#sec9').click(() => {
+        $('#sec9Drop').slideToggle();
+        $("#plus9,#minus9").toggle("smooth");
+      });
+
+    </script>
+  
+</div>
+
+  <hr>
+
+  <!--footer-->
+  <footer  style="background: #000000;">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 text-center text-md-left ">
+                
+                <div class="py-0">
+                    <h3 class="my-4 text-white">About<span class="mx-2 font-italic ">ASG technologies</span></h3>
+
+                    <p class="footer-links font-weight-bold">
+                       <l> <a class="text-white" href="#">Our Mission</a></l>
+                        |
+                      <l> <a class="text-white" href="#">Our Team</a></l>
+                        |
+                     <l>  <a class="text-white" href="#">Our Partner</a></l> 
+                        
+                    </p>
+                    <p class="text-light py-4 mb-4">&copy;2020 ASG Technologies Pvt. Ltd.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 text-white text-center text-md-left ">
+                <div class="py-2 my-4">
+                    <div>
+                      <h4>Live Sessions</h4>
+                        <p class="text-white"> 
+                          <a href="" style="color: white;">Network</a><br>
+                          <a href="" style="color: white;">Server</a><br>
+                          <a href style="color: white;">Security</a><br>
+                          <a href style="color: white;">Language</a><br>
+
+                           </p>
+                    </div>
+
+                <div>
+                        
+                    
+                        
+                    </div>  
+                </div>  
+            </div>
+            
+            <div class="col-md-4 text-white my-4 text-center text-md-left ">
+                <span class=" font-weight-bold ">Help And Support</span>
+      <p class=" my-2  "><a href="" style="color: white;">FAQ</a><br>
+      <a href="" style="color: white;">Contact us</a><br>
+      <a href="" style="color: white;">License Agreement</a>
+      </p>
+
+                <div class="py-2">
+                    <a href="#"><i class="fa fa-facebook fa-2x text-primary mx-3"></i></a>
+                    <a href="#"><i class="fa fa-google-plus fa-2x text-danger mx-3"></i></a>
+                    <a href="#"><i class="fa fa-twitter fa-2x text-info mx-3"></i></a>
+                    <a href="#"><i class="fa fa-youtube fa-2x text-danger mx-3"></i></a>
+                </div>
+            </div>
+        </div>  
+    </div>
+ </footer>
+</body>
+
+</html>

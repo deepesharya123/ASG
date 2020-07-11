@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+ 
+
+    <title>Home</title>
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+
+
+.d-none{
+  display: none;
+}
+.shadowIndigo{
+  transition: all 0.4s;
+}
+.shadowIndigo:hover{
+  transition: all 0.4s;
+  margin-top: -5px;
+filter: drop-shadow(1px 1px 10px #3f51b5);
+}
+.jumbotron{
+  opacity:3;
+  
+}
+.container {
+  position: relative;
+  width: 100%;
+  
+}
+
+.container img {
+  width: 100%;
+  
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -350%);
+ border-radius: 20%;
+  background-color: #2B547E;
+  color: white;
+  font-size: 20px;
+  z-index: 4;
+  
+  cursor: pointer;
+  
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: rgb(8, 79, 160);
+  z-index: 4;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+  z-index: 4;
+  color:white;
+} 
+        
+.overlay{
+	height: 625px ;
+	 width: 100%;
+	 background-color: rgba(0,0,0,0.6);
+	 position: absolute;
+	 z-index: 3;
+}      
+
+</style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top "  style="background: #000000">
+    <a class="navbar-brand" href="https://www.asg.com/">ASG Technologies</a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+      <span class="navbar-toggler-icon"></span>
+     </button>
+  
+    <div class="collapse navbar-collapse class" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto">
+        
+          
+        
+        <li class="nav-item  " >
+          <a class="nav-link" href="welcome"  style="padding-left: 20px; color: white;">Home <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="padding-left: 20px; color: white;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Courses
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" color: >Softaware </a>
+            <a class="dropdown-item" href="#">Js</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">python</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "  href="#" style="padding-left: 20px; color: white;">Live Sessions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.asg.com/en/Aboutus.aspx" style="padding-left: 20px; color: white;">About </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/contact" style="padding-left: 20px; color: white;">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="./users/login" style="padding-left: 20px; color: white;"  >sign in</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="/admin/register" style="padding-left: 20px; color: white;">Register as a instructor</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link " href="/admin/login" style="padding-left: 20px; color: white;">Login as a instructor</a>
+        </li>
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="padding-left: 20px; color: white;">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div></button>
+  </nav>
+  <div class="overlay"></div>
+  <div class="  img-responsive">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+    
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.ytimg.com/vi/Udtf3yYuraU/maxresdefault.jpg" style="height: 625px; width: 100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.npana.org/wp-content/uploads/2018/03/learning-3245793_1280.jpg" style="height: 625px; width: 100%">
+        </div>
+        <div class="carousel-item">
+          <img src="https://blog.commlabindia.com/wp-content/uploads/2016/10/why-corporate-organizations-prefer-elearning.jpg" style="height: 625px; width: 100%">
+        </div>
+     
+      
+    </div>
+      
+    </div>
+    </div><div class=" centered " >
+      <h1 ><b>Welcome to ASG   Technologies</b></h1>
+      
+        <p style="font-size: 20px; font-weight: 500;"><i>ASG is a Global Enterprise Software vendor providing solutions for some of the world’s largest businesses.</i></p>
+      </div>
+    <div class="container "><a href="/users/register"><button class="btn">SIGN UP FOR FREE</button></a></div>
+  
+
+  <div class="jumbotron col-12 text-center" id="cards" style="margin-top: 50px; background:#E9AB17">
+    <h1 class="text-center" style="margin-top:-30px ;">Course Category</h1>
+  <div class="row row-cols-1 row-cols-md-3 ">
+    <div class="col mb-4 ">
+      <div class="card text-white  mb-3" style="background: #2B547E ">
+        <img src="https://www.xploreitcorp.com/wp-content/uploads/2018/12/Network-Training.jpg" class="card-img-top" alt="..." style="height: 250px;">
+        <div class="card-body"><a href="" style="color: white;">
+          <h5 class="card-title">NETWORKING</h5>
+          <p class="card-text"> Networking courses and specializations teach network administration, architecture, infrastructure, troubleshooting, and more. Break
+          into the IT industry by learning applied networking skills.</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card text-white mb-3" style="background:  #2B547E ">
+        <img src="data:image/png;base64,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" class="card-img-top" alt="...">
+        <div class="card-body"><a href="" style="color: white;">
+          <h5 class="card-title">SECURITY</h5>
+          <p class="card-text">Security courses and specializations teach information security, cybersecurity, network security, blockchain and more. Learn skills such
+            as cryptography, risk assessment, and access control to help differentiate yourself in the IT industry.
+            
+            </p>
+        </div>
+      </div>
+    </div></a>
+    <div class="col mb-4">
+      <div class="card text-white  mb-3" style="background: #2B547E ">
+        <img src="https://img-a.udemycdn.com/course/240x135/972974_ee7f_2.jpg" class="card-img-top" alt="..." style="height: 250px;">
+        <div class="card-body"><a href="" style="color: white;">
+          <h5 class="card-title">SERVER</h5>
+          <p class="card-text">These courses cover everything from Active Directory to networking and file storage. Start watching these tutorials to solve your Windows Server issues today.</p>
+        </div>
+      </div>
+    </div></a>
+    <div class="col mb-4">
+      <div class="card text-white  mb-3" style="background: #2B547E ">
+        <img src="https://www.studybuzz.co.in/media/course/onlinebatch.jpg" class="card-img-top" alt="..." style="height: 250px;">
+        <div class="card-body"><a href="" style="color: white;">
+          <h5 class="card-title">LIVE BATCHES</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. </p>
+        </div>
+      </div>
+    </div></a>
+    <div class="col mb-4">
+      <div class="card text-white mb-3" style="background: #2B547E ">
+        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Best-Programming-Languages-to-Start-Learning-Today.jpg" class="card-img-top" alt="..." style="height: 250px;">
+        <div class="card-body"><a href="" style="color: white;">
+          <h5 class="card-title">LANGUAGE</h5>
+          <p class="card-text">Learn to Program and Analyze Data with Languages. Develop programs to gather, clean, analyze, and visualize data.</p>
+        </div>
+      </div>
+    </div></a>
+    <div class="col mb-4">
+      <div class="card text-white  mb-3" style="background: #2B547E">
+        <img src="https://specials-images.forbesimg.com/imageserve/5e56f223d378190007f46149/960x0.jpg?fit=scale" class="card-img-top" alt="..." >
+        <div class="card-body"><a href="" style="color: white;">
+          <h5 class="card-title">CONSULTANCY</h5>
+          <p class="card-text">Technical Consultancy Organizations (TCOs) provide a complete set of consultancy services to small and medium enterprises, individual entrepreneurs.</p>
+        </div>
+      </div>
+    </div></a>
+  </div>
+  </div>
+    </div>
+ 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <div class="container-fluid" style="background: #2B547E;color: black;margin-top: 74px; margin-bottom: 74px;">
+      <br><br><br>
+      <div class="mySlides">
+        <div class="d-flex justify-content-around row" style="word-break: keep-all; ">
+          
+          <div class="jumbotron col-md-5 w3-black shadowIndigo" >
+            <h1> bob</h1><p>it ia a good course</p>
+          </div>
+          <div class="jumbotron col-md-5 jumbotron shadowIndigo">
+            <h1> Sam</h1><p>nice </p>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides">
+        <div class="d-flex justify-content-around row" style="word-break: keep-all;">
+          <div class="jumbotron col-md-5 jumbotron ">
+            <h1>aman </h1><p>improved my skills</p>
+          </div>
+          <div class="jumbotron col-md-5 w3-black  shadowIndigo">
+            <h1>rachna</h1><p>good</p>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides">
+        <div class="d-flex justify-content-around row" style="word-break: keep-all;">
+          <div class="jumbotron col-md-5 w3-black shadowIndigo ">
+            <h1>ritu</h1><p>great</p>
+          </div>
+          <div class="jumbotron col-md-5 jumbotron shadowIndigo">
+            <h1>max </h1>
+            <p>nice</p>
+          </div>
+        </div>
+      </div>
+      <div class="mySlides">
+        <div class="d-flex justify-content-around row" style="word-break: keep-all;">
+          <div class="jumbotron col-md-5 jumbotron shadowIndigo ">
+            <h1>Sara</h1><p>excellent</p>
+          </div>
+          <div class="jumbotron col-md-5 w3-black shadowIndigo ">
+            <h1>asha</h1><p>amazing experience</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div></div></div>
+    <script>
+
+
+
+      var myIndex = 0;
+      carousel();
+  
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 6000); 
+  
+      }
+    </script>
+    <script>
+      $(document).ready(() => {
+        $(window).scroll(() => {
+          var positiontop = $(document).scrollTop();
+          if (positiontop > 300) {
+            $('.card:odd').addClass('animate__animated animate__backInLeft');
+            $('.card:even').addClass('animate__animated animate__backInRight');
+  
+          }
+          else {
+            $('.card:odd').removeClass('animate__animated animate__backInLeft');
+            $('.card:even').removeClass('animate__animated animate__backInRight');
+          }
+          if (positiontop > 862) {
+            $('.mySlides div div:even').addClass('animate__animated animate__backInRight');          
+            $('.mySlides div div:odd').addClass('animate__animated animate__backInLeft');
+          }
+        });
+      });
+    </script>
+   <footer  style="background: #000000;">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 text-center text-md-left ">
+                
+                <div class="py-0">
+                    <h3 class="my-4 text-white">About<span class="mx-2 font-italic ">ASG technologies</span></h3>
+
+                    <p class="footer-links font-weight-bold">
+                       <l> <a class="text-white" href="#">Our Mission</a></l>
+                        |
+                      <l> <a class="text-white" href="#">Our Team</a></l>
+                        |
+                     <l>  <a class="text-white" href="#">Our Partner</a></l> 
+                        
+                    </p>
+                    <p class="text-light py-4 mb-4">&copy;2020 ASG Technologies Pvt. Ltd.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 text-white text-center text-md-left ">
+                <div class="py-2 my-4">
+                    <div>
+                      <h4>Live Sessions</h4>
+                        <p class="text-white"> 
+                          <a href="" style="color: white;">Network</a><br>
+                          <a href="" style="color: white;">Server</a><br>
+                          <a href style="color: white;">Security</a><br>
+                          <a href style="color: white;">Language</a><br>
+
+                           </p>
+                    </div>
+
+                <div>
+                        
+                    
+                        
+                    </div>  
+                </div>  
+            </div>
+            
+            <div class="col-md-4 text-white my-4 text-center text-md-left ">
+                <span class=" font-weight-bold ">Help And Support</span>
+      <p class=" my-2  "><a href="" style="color: white;">FAQ</a><br>
+      <a href="" style="color: white;">Contact us</a><br>
+      <a href="" style="color: white;">License Agreement</a>
+      </p>
+
+                <div class="py-2">
+                    <a href="#"><i class="fab fa-facebook fa-2x text-primary mx-3"></i></a>
+                    <a href="#"><i class="fab fa-google-plus fa-2x text-danger mx-3"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x text-info mx-3"></i></a>
+                    <a href="#"><i class="fab fa-youtube fa-2x text-danger mx-3"></i></a>
+                </div>
+            </div>
+        </div>  
+    </div>
+ </footer>
+ 
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+</body>
+</html>
