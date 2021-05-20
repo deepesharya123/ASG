@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const dotenv = require('dotenv');
-dotenv.config()
+dotenv.config('./dev.env')
 
 const cookieParser =require('cookie-parser')
 const session = require('express-session') 
