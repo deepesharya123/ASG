@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+ 
+
+    <title>Admin portal</title>
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+body {
+     background: url(https://ak.picdn.net/shutterstock/videos/9082253/thumb/10.jpg) fixed;
+    background-size: cover;
+}
+
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #f2f2f2;
+}
+
+*[role="form"] h2 { 
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 15%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+
+
+</style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top "  style="background: #000000">
+    <a class="navbar-brand" href="https://www.asg.com">ASG Technologies</a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+      <span class="navbar-toggler-icon"></span>
+     </button>
+  
+    <div class="collapse navbar-collapse class" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto">
+        
+          
+        
+        <li class="nav-item  " >
+          <a class="nav-link" href="/"  style="padding-left: 20px; color: white;">Home <span class="sr-only"></span></a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="padding-left: 20px; color: white;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Courses
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" color: >Softaware </a>
+            <a class="dropdown-item" href="#">Js</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">python</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "  href="#" style="padding-left: 20px; color: white;">Live Sessions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.asg.com/en/Aboutus.aspx" style="padding-left: 20px; color: white;">About </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="https://www.asg.com/Contact-Us.aspx" style="padding-left: 20px; color: white;">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/admin/login" style="padding-left: 20px; color: white;">Login </a>
+        </li>
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="padding-left: 20px; color: white;">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div></button>
+  </nav>
+<!--form -->
+
+<div class="container">
+
+  <form action="/admin/register" method="POST" id="adminregisterform" class="form-horizontal" role="form" >
+      <h2>ADMIN PORTAL</h2>
+
+          <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">USERNAME</label>
+            <div class="col-sm-9">
+                <input type="text" id="adminName" placeholder="Name" class="form-control" name="adminName">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="email" class="col-sm-3 control-label">Email </label>
+            <div class="col-sm-9">
+                <input type="email" id="adminEmail" placeholder="Email" class="form-control" name= "adminEmail">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Password</label>
+            <div class="col-sm-9">
+                <input type="password" id="password" placeholder="Password" class="form-control" name="adminPassword">
+            </div>
+        </div>
+        
+        
+       
+  
+            
+            
+       <!-- /.form-group -->
+        <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+           
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+      </div> 
+      </div>
+</div>
+
+  </form>  <!-- /form -->
+
+</div>
+<script>
+  $(function(){
+    $.validator.setDefaults({
+      highlight: function(element){
+        $(element)
+        .closest('.form-group')
+        .addClass('has-error')
+      },
+      unhighlight: function(element){
+        $(element)
+        .closest('.form-group')
+        .removeClass('has-error')
+      }
+    });
+    
+    $.validate({
+      rules:
+      {	
+          password: "required",
+        
+        
+        email: {
+          required: true,
+          email: true
+        }
+      },
+        messages:{			
+          email: {
+          required: true,
+          email: true
+        }
+      },
+          password: {
+            required: " Please enter password"
+          },
+         
+          email: {
+            required: ' Please enter email',
+            email: ' Please enter valid email'
+          },
+         
+    })
+})
+        
+    //   })
+
+ 
+  </script>
+  
+
+
+  <!--footer-->
+  <footer  style="background: #000000;">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 text-center text-md-left ">
+                
+                <div class="py-0">
+                    <h3 class="my-4 text-white">About<span class="mx-2 font-italic ">ASG technologies</span></h3>
+
+                    <p class="footer-links font-weight-bold">
+                       <l> <a class="text-white" href="#">Our Mission</a></l>
+                        |
+                      <l> <a class="text-white" href="#">Our Team</a></l>
+                        |
+                     <l>  <a class="text-white" href="#">Our Partner</a></l> 
+                        
+                    </p>
+                    <p class="text-light py-4 mb-4">&copy;2020 ASG Technologies Pvt. Ltd.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 text-white text-center text-md-left ">
+                <div class="py-2 my-4">
+                    <div>
+                      <h4>Live Sessions</h4>
+                        <p class="text-white"> 
+                          <a href="" style="color: white;">Network</a><br>
+                          <a href="" style="color: white;">Server</a><br>
+                          <a href style="color: white;">Security</a><br>
+                          <a href style="color: white;">Language</a><br>
+
+                           </p>
+                    </div>
+
+                <div>
+                        
+                    
+                        
+                    </div>  
+                </div>  
+            </div>
+            
+            <div class="col-md-4 text-white my-4 text-center text-md-left ">
+                <span class=" font-weight-bold ">Help And Support</span>
+      <p class=" my-2  "><a href="" style="color: white;">FAQ</a><br>
+      <a href="" style="color: white;">Contact us</a><br>
+      <a href="" style="color: white;">License Agreement</a>
+      </p>
+
+                <div class="py-2">
+                    <a href="#"><i class="fab fa-facebook fa-2x text-primary mx-3"></i></a>
+                    <a href="#"><i class="fab fa-google-plus fa-2x text-danger mx-3"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x text-info mx-3"></i></a>
+                    <a href="#"><i class="fab fa-youtube fa-2x text-danger mx-3"></i></a>
+                </div>
+            </div>
+        </div>  
+    </div>
+ </footer>
+  </body>
+  </html>

@@ -1,0 +1,19 @@
+<%=totalNumberOfDocuments%>
+<h1>The web content</h1>
+
+ <%let array = totalNumberOfDocuments%>
+<br>
+ <%=array%>
+<br>
+ <% for( let i = 0; i < array; i++ ) { %>
+   <form action="" method="">
+    <%let number = "/users/sendWebDetails/"+i %>  
+    <%=number%>
+    <%  let vidId = {id:i}  %>
+    <a href="/users/webMaterial/<%=vidId.id%>">Lecture <%i+1%></a>
+  
+  </form>
+ <% } %>
+
+
+<script src="/js/app.js"></script>
