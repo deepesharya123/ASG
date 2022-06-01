@@ -28,7 +28,7 @@
     "nodemailer": "^6.4.10",
     "nodemailer-mailgun-transport": "^2.0.0",
     "nodemon": "^2.0.4",
-    "sharp": "^0.25.4",
+    "sharp": "^0.30.5",
     "validator": "^13.1.1"
   }
 }
